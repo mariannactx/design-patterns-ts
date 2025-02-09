@@ -1,0 +1,1 @@
+# rabiscando-padroes-de-projeto-ts
