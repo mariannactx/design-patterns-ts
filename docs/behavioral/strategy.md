@@ -44,6 +44,9 @@ Strategy <|.. StrategyC
 
 ```bash
 $ npm run build
+```
+
+```bash
 $ npm run execute -- behavioral/strategy
 ```
 
