@@ -1,12 +1,15 @@
 # Rabiscando Padrões de Projeto - Typescript
+
 Scribbling Design Patterns - Typescript
 
 ## How to run
-``` bash
+
+```bash
 $
 ```
 
 ## Diagrams
+
 ### Creational Design Patterns
 
 - [Abstract Factory](/docs/creational/abstract-factory.md)
