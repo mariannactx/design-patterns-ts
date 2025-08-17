@@ -22,15 +22,22 @@
   "scripts": {
     "dev": "npx tsc -w",
     "build": "npx tsc",
-    "execute": "func() { node .build/\"$1\"; }; func"
+    "execute": "func() { node .build/\"$1\"; }; func",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:mutation": "npx stryker run"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",
+    "@stryker-mutator/jest-runner": "^9.0.1",
+    "@types/jest": "^30.0.0",
     "@typescript-eslint/eslint-plugin": "^8.23.0",
     "@typescript-eslint/parser": "^8.23.0",
     "eslint": "^9.20.0",
     "eslint-config-prettier": "^10.0.1",
+    "jest": "^30.0.5",
     "prettier": "^3.5.0",
+    "ts-jest": "^29.4.1",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.23.0"
   }
