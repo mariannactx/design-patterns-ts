@@ -1,17 +1,8 @@
 import Order from './Order';
 
-class OrderFurniture extends Order {
-  private sector: string;
-
-  constructor() {
-    super();
+export default class OrderFurniture extends Order {
+  constructor(value: number, shipping: Shipping) {
+    super(value, shipping);
     this.sector = 'Furniture';
-  }
-
-  getSector(): string {
-    return this.sector;
-  }
-  setSector(sector: string): void {
-    this.sector = sector;
   }
 }

@@ -1,24 +1,14 @@
 export default abstract class Order {
-  private value!: number;
+  public value!: number;
   private shipping!: Shipping;
+  protected sector!: string;
 
-  getValue(): number {
-    return this.value;
-  }
-
-  setValue(value: number): void {
+  constructor(value: number, shipping: Shipping) {
     this.value = value;
-  }
-
-  getShipping(): Shipping {
-    return this.shipping;
-  }
-
-  setShipping(shipping: Shipping): void {
     this.shipping = shipping;
   }
 
-  calculateShipping(): number {
+  public calculateShipping(): number {
     return this.shipping.calculate(this.value);
   }
 }

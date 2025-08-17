@@ -1,5 +1,9 @@
 # Strategy
 
+- What: it creates a family of algorithms that can be exchanged, that is, using one family member in place of another, depending on the needs of those who use them.
+- When: many classes do the same thing in different ways.
+- Cons: when the family of algorithms is to big, communication costs can be a problem.
+
 ## Generic diagram
 
 ```mermaid
@@ -43,11 +47,7 @@ Strategy <|.. StrategyC
 ### Execute
 
 ```bash
-$ npm run build
-```
-
-```bash
-$ npm run execute -- behavioral/strategy
+$ npm test -- behavioral/strategy
 ```
 
 ### Class diagram
