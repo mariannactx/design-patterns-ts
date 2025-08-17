@@ -1,7 +1,9 @@
 # Scribbling Design Patterns - Typescript
 [Rabiscando padrões de projeto](https://fundamentos.dev/pt-br/club/fundamentodev/products/915085)
 ## Diagrams
+### Basics
 
+- [Basics](docs/basics.md)
 ### Creational Design Patterns
 
 - [Abstract Factory](docs/creational/abstract-factory.md)
