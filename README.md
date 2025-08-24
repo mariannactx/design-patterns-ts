@@ -1,9 +1,11 @@
-# Scribbling Design Patterns - Typescript
-[Rabiscando padrões de projeto](https://fundamentos.dev/pt-br/club/fundamentodev/products/915085)
+# Design Patterns - Typescript
+
 ## Diagrams
+
 ### Basics
 
 - [Basics](docs/basics.md)
+
 ### Creational Design Patterns
 
 - [Abstract Factory](docs/creational/abstract-factory.md)
@@ -35,3 +37,8 @@
 - [State](docs/behavioral/state.md)
 - [Strategy](docs/behavioral/strategy.md)
 - [Template Method](docs/behavioral/template-Method.md)
+
+## Thanks to
+
+- [Rabiscando padrões de projeto](https://fundamentos.dev/pt-br/club/fundamentodev/products/915085)
+- [Refactoring Guru](https://refactoring.guru/pt-br/design-patterns)
