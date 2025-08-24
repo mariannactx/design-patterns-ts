@@ -42,3 +42,4 @@
 
 - [Rabiscando padrões de projeto](https://fundamentos.dev/pt-br/club/fundamentodev/products/915085)
 - [Refactoring Guru](https://refactoring.guru/pt-br/design-patterns)
+- [Gemini](https://gemini.google.com/)
