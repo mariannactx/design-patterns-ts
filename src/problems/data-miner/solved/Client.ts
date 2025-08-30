@@ -1,30 +1,27 @@
 import CsvDataMiner from './CsvDataMiner';
 import PdfDataMiner from './PdfDataMiner';
 import DocDataMiner from './DocDataMiner';
-import { CSV } from './CsvDocument';
-import { PDF } from './PdfDocument';
-import { DOC } from './DocDocument';
+import { DocumentTypes, Document } from './typings/Document';
+import { CSV } from './typings/Csv';
+import { PDF } from './typings/Pdf';
+import { DOC } from './typings/Doc';
 import DataMiner from './DataMiner';
-import { TypeDocument } from './TypeDocument';
+
+type DataMinerFactory = (document: Document) => DataMiner;
 
 export default class Client {
-  public processDocument(document: TypeDocument) {
-    let dataMiner: DataMiner;
-
-    switch (document.type) {
-      case 'CSV':
-        dataMiner = new CsvDataMiner(document as CSV);
-        break;
-      case 'PDF':
-        dataMiner = new PdfDataMiner(document as PDF);
-        break;
-      case 'DOC':
-        dataMiner = new DocDataMiner(document as DOC);
-        break;
-      default:
-        throw new Error('Unsupported file type');
-    }
-
+  public processDocument(document: Document) {
+    const dataMiner: DataMiner = this.createDataMiner(document);
     dataMiner.mine();
+  }
+
+  private miners: Record<DocumentTypes, DataMinerFactory> = {
+    CSV: (document) => new CsvDataMiner(document as CSV),
+    PDF: (document) => new PdfDataMiner(document as PDF),
+    DOC: (document) => new DocDataMiner(document as DOC),
+  };
+
+  public createDataMiner(document: Document) {
+    return this.miners[document.type](document);
   }
 }

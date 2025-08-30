@@ -1,4 +1,4 @@
-import { DOC } from './DocDocument';
+import { DOC } from './typings/Doc';
 import DataMiner from './DataMiner';
 
 export default class DocDataMiner extends DataMiner {

@@ -1,7 +1,7 @@
-import { TypeDocument } from './TypeDocument';
+import { Document } from './typings/Document';
 
 export default abstract class DataMiner {
-  constructor(protected document: TypeDocument) {}
+  constructor(protected document: Document) {}
 
   public mine() {
     this.openFile();

@@ -1,4 +1,4 @@
-import { PDF } from './PdfDocument';
+import { PDF } from './typings/Pdf';
 import DataMiner from './DataMiner';
 
 export default class PdfDataMiner extends DataMiner {

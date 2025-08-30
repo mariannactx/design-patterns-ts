@@ -1,4 +1,4 @@
-import { CSV } from './CsvDocument';
+import { CSV } from './typings/Csv';
 import DataMiner from './DataMiner';
 
 export default class CsvDataMiner extends DataMiner {
