@@ -47,7 +47,7 @@ Strategy <|.. StrategyC
 ### Execute
 
 ```bash
-$ npm test -- behavioral/strategy
+$ npm run test:patterns:unit -- behavioral/strategy
 ```
 
 ### Class diagram

@@ -50,12 +50,12 @@ AbstractClass <|-- ConcretClassC
 ### Execute
 
 ```bash
-$ npm test -- behavioral/template-method
+$ npm run test:patterns:unit -- behavioral/template-method
 ```
 
 ### Class diagram
 
-Blablabla
+The payments of each type (Debit, Credit, Cash) can have a default behaviour for fee calculation or have its own calculation. Each type have to implement its own discount calculation. All types have the save behaviour for charging.
 
 ```mermaid
 ---
