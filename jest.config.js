@@ -10,4 +10,5 @@ module.exports = {
   },
   coverageReporters: ['json', 'html', 'text'],
   collectCoverageFrom: ['src/**/*.ts', '!src/**/*.d.ts'],
+  testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.stryker-tmp/'],
 };
