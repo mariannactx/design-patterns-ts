@@ -1,7 +1,7 @@
-import OrderEletronics from '../../src/behavioral/strategy/OrderEletronics';
-import OrderFurniture from '../../src/behavioral/strategy/OrderFurniture';
-import ShippingCommon from '../../src/behavioral/strategy/ShippingCommon';
-import ShippingExpress from '../../src/behavioral/strategy/ShippingExpress';
+import OrderEletronics from '../../src/patterns/behavioral/strategy/OrderEletronics';
+import OrderFurniture from '../../src/patterns/behavioral/strategy/OrderFurniture';
+import ShippingCommon from '../../src/patterns/behavioral/strategy/ShippingCommon';
+import ShippingExpress from '../../src/patterns/behavioral/strategy/ShippingExpress';
 
 describe('behavioral/strategy', () => {
   it('generates correctly each kind of orders', () => {

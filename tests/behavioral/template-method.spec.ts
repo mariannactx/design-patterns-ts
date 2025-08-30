@@ -1,7 +1,7 @@
-import Gateway from '../../src/behavioral/template-method/Gateway';
-import Debit from '../../src/behavioral/template-method/Debit';
-import Credit from '../../src/behavioral/template-method/Credit';
-import Cash from '../../src/behavioral/template-method/Cash';
+import Gateway from '../../src/patterns/behavioral/template-method/Gateway';
+import Debit from '../../src/patterns/behavioral/template-method/Debit';
+import Credit from '../../src/patterns/behavioral/template-method/Credit';
+import Cash from '../../src/patterns/behavioral/template-method/Cash';
 describe('behavioral/template-method', () => {
   const gateway = new Gateway();
 

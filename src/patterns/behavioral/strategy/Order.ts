@@ -1,3 +1,5 @@
+import { Shipping } from './Shipping';
+
 export default abstract class Order {
   public value!: number;
   private shipping!: Shipping;
