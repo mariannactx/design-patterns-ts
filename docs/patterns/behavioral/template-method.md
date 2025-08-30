@@ -65,29 +65,29 @@ classDiagram
 direction TB
 
 class Gateway {
-  + charge(number value): boolean
+  + charge(value: number) boolean
 }
 
 class Payment {
-  - value: number
-  - gateway: Gateway
-  + calcFee(): number
-  + calcDiscount()*: number
-  + charge(number value): boolean
+  - value number
+  - gateway Gateway
+  + calcFee() number
+  + calcDiscount()* number
+  + charge(value: number) boolean
 }
 
 class Credit {
-  + calcFee(): number
-  + calcDiscount(): number
+  + calcFee() number
+  + calcDiscount() number
 }
 
 class Debit {
-  + calcFee(): number
-  + calcDiscount(): number
+  + calcFee() number
+  + calcDiscount() number
 }
 
 class Cash {
-  + calcDiscount(): number
+  + calcDiscount() number
 }
 
 Gateway <-- Payment

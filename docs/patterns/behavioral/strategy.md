@@ -15,7 +15,7 @@ direction TB
 
 class Context {
     - Strategy strategy
-    + setStrategy(Strategy strategy) void
+    + setStrategy(strategy: Strategy) void
     + request()
 }
 
@@ -61,31 +61,31 @@ title: Problem - Shipping calculation
 classDiagram
 direction TB
     class Order {
-	    - float value
-	    - Shipping shipping
-	    + getValue() float
-	    + setValue(float value) void
-	    + setShipping(Shipping shipping) void
-	    + calculateShipping() float
+	    - value number
+	    - shipping Shipping
+	    + getValue() number
+	    + setValue(value: number) void
+	    + setShipping(shipping: Shipping) void
+	    + calculateShipping() number
     }
     class OrderEletronics {
-	    - string sector
+	    - sector string
 	    + getSector() string
-	    + setSector(string sector) void
+	    + setSector(sector: string) void
     }
     class OrderFurniture {
-	    - string sector
+	    - sector string
 	    + getSector() string
-	    + setSector(string sector) void
+	    + setSector(sector: string) void
     }
     class Shipping {
-	    + calculate(float value) float
+	    + calculate(value: number) number
     }
     class ShippingCommon {
-	    + calculate(float value) float
+	    + calculate(value: number) number
     }
     class ShippingExpress {
-	    + calculate(float value) float
+	    + calculate(value: number) number
     }
 	<<Abstract>> Order
 	<<Interface>> Shipping
