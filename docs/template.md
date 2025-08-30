@@ -19,7 +19,7 @@ direction TB
 ### Execute
 
 ```bash
-$ npm test -- type/name
+$ npm test:patterns:unit -- type/name
 ```
 
 ### Class diagram
