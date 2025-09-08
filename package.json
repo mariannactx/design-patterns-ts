@@ -22,8 +22,8 @@
   "scripts": {
     "dev": "npx tsc -w",
     "build": "npx tsc",
-    "execute:problems": "func() { node .build/\"$1\"/code-with-problem; }; func",
-    "execute:solved": "func() { node .build/\"$1\"/solved; }; func",
+    "execute:problems": "func() { node .build/\"$1\"/code-with-problem; }; npm run build && func",
+    "execute:solved": "func() { node .build/\"$1\"/solved; }; npm run build && func",
     "test:patterns:unit": "jest",
     "test:patterns:coverage": "jest --coverage",
     "test:patterns:mutation": "npx stryker run"
