@@ -1,3 +1,13 @@
+# Solved: Data miner
+
+## Execute
+
+```bash
+$ npm run execute:solved data-miner
+```
+
+## Class diagram
+
 ```mermaid
 ---
 title: Classes

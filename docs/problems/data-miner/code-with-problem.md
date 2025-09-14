@@ -1,3 +1,15 @@
+# Code w/ problem: Data miner
+
+A data mining application designed to analyze corporate documents. The system processes documents in various formats, such as PDF, DOC, and CSV, and aims to extract and standardize the data into a uniform output.
+
+## Execute
+
+```bash
+$ npm run execute:problem data-miner
+```
+
+## Class diagram
+
 ```mermaid
 ---
 title: Classes

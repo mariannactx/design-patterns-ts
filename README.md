@@ -1,8 +1,17 @@
 # Design Patterns - Typescript
 
+- [Design Patterns - Typescript](#design-patterns---typescript)
+  - [Diagrams](#diagrams)
+    - [Diagram representation basics](#diagram-representation-basics)
+    - [Creational Design Patterns](#creational-design-patterns)
+    - [Structural Design Patterns](#structural-design-patterns)
+    - [Behavioral Design Patterns](#behavioral-design-patterns)
+    - [Problems](#problems)
+  - [Thanks to](#thanks-to)
+
 ## Diagrams
 
-### Basics
+### Diagram representation basics
 
 - [Basics](docs/basics.md)
 
@@ -37,6 +46,18 @@
 - [State](docs/behavioral/state.md)
 - [Strategy](docs/behavioral/strategy.md)
 - [Template Method](docs/behavioral/template-Method.md)
+
+### Problems
+
+- Data Miner
+  - [Code w/ problem](docs/problems/data-miner/code-with-problem.md)
+  - [Solved](docs/problems/data-miner/solved.md)
+- Casual travelers
+  - [Code w/ problem](docs/problems/casual-travelers/code-with-problem.md)
+  - [Solved](docs/problems/casual-travelers/solved.md)
+- News agency
+  - [Code w/ problem](docs/problems/news-agency/code-with-problem.md)
+  - [Solved](docs/problems/news-agency/solved.md)
 
 ## Thanks to
 
