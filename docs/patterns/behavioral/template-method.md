@@ -13,7 +13,8 @@ title: Generic diagram
 classDiagram
 direction TB
 
-class AbstractClass* {
+class AbstractClass {
+  <<Abstract>>
   + methodA()
   + methodB()*
   + methodC()*
