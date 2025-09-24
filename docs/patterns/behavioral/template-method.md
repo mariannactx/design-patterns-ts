@@ -70,6 +70,7 @@ class Gateway {
 }
 
 class Payment {
+  <<Abstract>>
   - value number
   - gateway Gateway
   + calcFee() number
