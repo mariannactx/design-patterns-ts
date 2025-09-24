@@ -63,9 +63,4 @@ Router <|-- CyclingRouter
 Router <|-- PublicTransportRouter
 Router <|-- TouristicRouter
 Router <|-- WalkingRouter
-Client o-- CarRouter
-Client o-- CyclingRouter
-Client o-- PublicTransportRouter
-Client o-- TouristicRouter
-Client o-- WalkingRouter
 ```
