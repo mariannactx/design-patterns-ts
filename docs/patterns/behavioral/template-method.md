@@ -2,7 +2,7 @@
 
 - What: defines an skeleton of an algorithm inside a method, transfering some of its steps to subclasses. Avoids duplication between similar classes.
 - When: there is a set of classes executing the same steps but with different behavior for each one
-- Cons: if there is too much abstract classes, creating new subclasses becomes too complex
+- Cons: if there is too much abstract methods, creating new subclasses becomes too complex
 
 ## Generic diagram
 
