@@ -8,7 +8,7 @@ module.exports = {
   transform: {
     ...tsJestTransformCfg,
   },
-  coverageReporters: ['json', 'html', 'text'],
+  coverageReporters: ['json', 'html', 'text', 'text-summary'],
   collectCoverageFrom: ['src/**/*.ts', '!src/**/*.d.ts'],
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.stryker-tmp/'],
 };

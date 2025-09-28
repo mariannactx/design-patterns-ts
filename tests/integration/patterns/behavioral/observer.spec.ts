@@ -1,13 +1,23 @@
-import Email from '../../src/patterns/behavioral/observer/Email';
-import Client from '../../src/patterns/behavioral/observer/Client';
-import Employee from '../../src/patterns/behavioral/observer/Employee';
-import Newsletter from '../../src/patterns/behavioral/observer/Newsletter';
-import Partner from '../../src/patterns/behavioral/observer/Partner';
-import Supplier from '../../src/patterns/behavioral/observer/Supplier';
-
-jest.mock('../../src/patterns/behavioral/observer/Email');
+import Email from '../../../../src/patterns/behavioral/observer/Email';
+import Client from '../../../../src/patterns/behavioral/observer/Client';
+import Employee from '../../../../src/patterns/behavioral/observer/Employee';
+import Newsletter from '../../../../src/patterns/behavioral/observer/Newsletter';
+import Partner from '../../../../src/patterns/behavioral/observer/Partner';
+import Supplier from '../../../../src/patterns/behavioral/observer/Supplier';
 
 describe('behavioral/observer', () => {
+  let mockLog: jest.SpyInstance;
+
+  beforeEach(() => {
+    mockLog = jest.spyOn(console, 'log').mockImplementation(() => {});
+  });
+
+  afterEach(() => {
+    mockLog.mockRestore();
+  });
+
+  const message = 'New message 1';
+
   it('should create subject and observers correctly', () => {
     const newsletter = new Newsletter();
 
@@ -49,13 +59,20 @@ describe('behavioral/observer', () => {
     jest.spyOn(partner, 'update');
     jest.spyOn(supplier, 'update');
 
-    newsletter.addMessage('New message 1');
+    newsletter.addMessage(message);
 
     expect(Email.send).toHaveBeenCalledTimes(4);
-    expect(client.update).toHaveBeenCalledWith('New message 1');
-    expect(employee.update).toHaveBeenCalledWith('New message 1');
-    expect(partner.update).toHaveBeenCalledWith('New message 1');
-    expect(supplier.update).toHaveBeenCalledWith('New message 1');
+    expect(mockLog).toHaveBeenCalledTimes(4);
+
+    expect(mockLog).toHaveBeenCalledWith(`Sending email to ${client.getEmail()}: ${message}`);
+    expect(mockLog).toHaveBeenCalledWith(`Sending email to ${employee.getEmail()}: ${message}`);
+    expect(mockLog).toHaveBeenCalledWith(`Sending email to ${partner.getEmail()}: ${message}`);
+    expect(mockLog).toHaveBeenCalledWith(`Sending email to ${supplier.getEmail()}: ${message}`);
+
+    expect(client.update).toHaveBeenCalledWith(message);
+    expect(employee.update).toHaveBeenCalledWith(message);
+    expect(partner.update).toHaveBeenCalledWith(message);
+    expect(supplier.update).toHaveBeenCalledWith(message);
   });
 
   it('should not notify removered observers', () => {
@@ -73,11 +90,11 @@ describe('behavioral/observer', () => {
 
     partner.unsubscribe();
 
-    newsletter.addMessage('New message 1');
+    newsletter.addMessage(message);
 
-    expect(client.update).toHaveBeenCalledWith('New message 1');
-    expect(employee.update).toHaveBeenCalledWith('New message 1');
-    expect(partner.update).not.toHaveBeenCalledWith('New message 1');
-    expect(supplier.update).toHaveBeenCalledWith('New message 1');
+    expect(client.update).toHaveBeenCalledWith(message);
+    expect(employee.update).toHaveBeenCalledWith(message);
+    expect(partner.update).not.toHaveBeenCalledWith(message);
+    expect(supplier.update).toHaveBeenCalledWith(message);
   });
 });
