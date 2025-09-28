@@ -2,14 +2,14 @@ import State from './State';
 import StateException from './StateException';
 
 export default class Created extends State {
-  protected exceptionReason: string = 'Order not payed.';
+  protected exceptionReason: string = 'Order not paid.';
 
   payingSuccess(): void {
-    this.order.setState(this.order.payed);
+    this.order.setState(this.order.getPaid());
   }
 
   cancel(): void {
-    this.order.setState(this.order.cancelled);
+    this.order.setState(this.order.getCancelled());
   }
 
   send(): void {
