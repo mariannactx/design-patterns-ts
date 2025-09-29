@@ -55,12 +55,6 @@ ObserverB --> SubjectA
 
 ## Problem - Newsletter
 
-### Execute
-
-```bash
-$ npm run test:patterns:unit -- behavioral/observer
-```
-
 ### Class diagram
 
 ```mermaid
@@ -142,4 +136,18 @@ Client --> Newsletter
 Supplier --> Newsletter
 Employee --> Newsletter
 Partner --> Newsletter
+```
+
+### Tests
+
+#### Unit and integration tests
+
+```bash
+$ npm run test:pattern behavioral/observer
+```
+
+#### Mutation test
+
+```bash
+$ npm run test:mutation:pattern behavioral/observer
 ```

@@ -1,11 +1,5 @@
 # Solved: Casual traveler
 
-## Execute
-
-```bash
-$ npm run execute:solved news-agency
-```
-
 ## Class diagram
 
 ```mermaid
@@ -63,4 +57,24 @@ Router <|-- CyclingRouter
 Router <|-- PublicTransportRouter
 Router <|-- TouristicRouter
 Router <|-- WalkingRouter
+```
+
+## Execute
+
+```bash
+$ npm run execute:solved news-agency
+```
+
+## Tests
+
+### Unit and integration tests
+
+```bash
+$ npm run test:problem news-agency
+```
+
+### Mutation test
+
+```bash
+$ npm run test:mutation:problem news-agency
 ```

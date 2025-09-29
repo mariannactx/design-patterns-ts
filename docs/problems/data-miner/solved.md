@@ -1,11 +1,5 @@
 # Solved: Data miner
 
-## Execute
-
-```bash
-$ npm run execute:solved data-miner
-```
-
 ## Class diagram
 
 ```mermaid
@@ -62,4 +56,24 @@ DataMiner <|-- DocDataMiner
 DataMiner <|-- PdfDataMiner
 DataMiner --> TypeDocument
 
+```
+
+## Execute
+
+```bash
+$ npm run execute:solved data-miner
+```
+
+## Tests
+
+### Unit and integration tests
+
+```bash
+$ npm run test:problem data-miner
+```
+
+### Mutation test
+
+```bash
+$ npm run test:mutation:problem data-miner
 ```

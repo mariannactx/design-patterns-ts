@@ -18,12 +18,6 @@ direction TB
 
 ## Problem - problem title
 
-### Execute
-
-```bash
-$ npm test:patterns:unit -- behavioral/state
-```
-
 ### Class diagram
 
 Description
@@ -34,4 +28,18 @@ title: Problem - problem title
 ---
 classDiagram
 direction TB
+```
+
+### Tests
+
+#### Unit and integration tests
+
+```bash
+$ npm run test:pattern behavioral/state
+```
+
+#### Mutation test
+
+```bash
+$ npm run test:mutation:pattern behavioral/state
 ```

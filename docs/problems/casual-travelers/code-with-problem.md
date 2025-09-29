@@ -2,12 +2,6 @@
 
 A navigation application for casual travelers, centered around a beautiful map that helps people quickly orient themselves in any city. The app allows for an address to be entered, displaying the fastest route to that destination on the map. It can build routes for roads, walking, public transportation, cycling, and tourist attractions.
 
-## Execute
-
-```bash
-$ npm run execute:problem casual-travelers
-```
-
 ## Class diagram
 
 ```mermaid
@@ -42,4 +36,24 @@ class Router {
 
 Client --> Router
 
+```
+
+## Execute
+
+```bash
+$ npm run execute:problem casual-travelers
+```
+
+## Tests
+
+### Unit and integration tests
+
+```bash
+$ npm run test:problem casual-travelers
+```
+
+### Mutation test
+
+```bash
+$ npm run test:mutation:problem casual-travelers
 ```

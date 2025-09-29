@@ -44,12 +44,6 @@ Strategy <|.. StrategyC
 
 ## Problem - Shipping calculation
 
-### Execute
-
-```bash
-$ npm run test:patterns:unit -- behavioral/strategy
-```
-
 ### Class diagram
 
 The orders of each sector (eletronics, furniture, etc) can have different shipping calculations (shipping family: common, express, etc)
@@ -95,4 +89,18 @@ direction TB
     Shipping <|.. ShippingExpress
     Order o-- Shipping
 
+```
+
+### Tests
+
+#### Unit and integration tests
+
+```bash
+$ npm run test:pattern behavioral/strategy
+```
+
+#### Mutation test
+
+```bash
+$ npm run test:mutation:pattern behavioral/strategy
 ```
