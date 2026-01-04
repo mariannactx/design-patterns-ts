@@ -26,11 +26,11 @@
     "execute:solved": "bash functions.sh execute_solved",
     "test:pattern": "bash functions.sh test_pattern",
     "test:problem": "bash functions.sh test_problem",
+    "test:all": "jest tests/integration tests/unit --coverage",
     "test:mutation:pattern": "bash functions.sh test_mutation_pattern",
     "test:mutation:problem": "bash functions.sh test_mutation_problem",
-    "test:all": "jest tests/integration tests/unit --coverage",
-    "test:mutation": "npx stryker run",
-    "test": "npm run test:all && npm run test:mutation"
+    "test:mutation:all": "npx stryker run",
+    "test": "npm run test:all && npm run test:mutation:all"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",
