@@ -28,6 +28,35 @@ title: Problem - problem title
 ---
 classDiagram
 direction TB
+
+
+class Order {
+
+}
+
+class State {
+  <<abstract>>
+}
+
+class Created {
+
+}
+
+class Paid {
+
+}
+
+class Sent {
+
+}
+
+class Cancelled {
+
+}
+
+class StateException {
+
+}
 ```
 
 ### Tests

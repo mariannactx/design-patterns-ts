@@ -5,10 +5,10 @@ describe('behavioral/state', () => {
   let mockConsole: jest.SpyInstance;
 
   const errorMessage = 'Operation not supported.';
-  const createdReason = 'Order not paid.';
-  const paidReason = 'Order already paid.';
-  const sentReason = 'Order already sent.';
-  const cancelledReason = 'Order cancelled.';
+  const createdErrorReason = 'Order not paid.';
+  const paidErrorReason = 'Order already paid.';
+  const sentErrorReason = 'Order already sent.';
+  const cancelledErrorReason = 'Order cancelled.';
 
   beforeEach(() => {
     mockConsole = jest.spyOn(console, 'log').mockImplementation(() => {});
@@ -61,20 +61,20 @@ describe('behavioral/state', () => {
     order.cancel();
 
     order.payingSuccess();
-    expect(mockConsole).toHaveBeenCalledWith(`${errorMessage} ${cancelledReason}`);
+    expect(mockConsole).toHaveBeenCalledWith(`${errorMessage} ${cancelledErrorReason}`);
 
     order.send();
-    expect(mockConsole).toHaveBeenNthCalledWith(2, `${errorMessage} ${cancelledReason}`);
+    expect(mockConsole).toHaveBeenNthCalledWith(2, `${errorMessage} ${cancelledErrorReason}`);
 
     order.cancel();
-    expect(mockConsole).toHaveBeenNthCalledWith(3, `${errorMessage} ${cancelledReason}`);
+    expect(mockConsole).toHaveBeenNthCalledWith(3, `${errorMessage} ${cancelledErrorReason}`);
 
     expect(order['state']).toBe(order.getCancelled());
   });
 
   it('should not allow send before payingSuccess', () => {
     order.send();
-    expect(mockConsole).toHaveBeenCalledWith(`${errorMessage} ${createdReason}`);
+    expect(mockConsole).toHaveBeenCalledWith(`${errorMessage} ${createdErrorReason}`);
     expect(order['state']).toBe(order.getCreated());
   });
 
@@ -83,13 +83,13 @@ describe('behavioral/state', () => {
     order.send();
 
     order.payingSuccess();
-    expect(mockConsole).toHaveBeenCalledWith(`${errorMessage} ${sentReason}`);
+    expect(mockConsole).toHaveBeenCalledWith(`${errorMessage} ${sentErrorReason}`);
 
     order.send();
-    expect(mockConsole).toHaveBeenNthCalledWith(2, `${errorMessage} ${sentReason}`);
+    expect(mockConsole).toHaveBeenNthCalledWith(2, `${errorMessage} ${sentErrorReason}`);
 
     order.cancel();
-    expect(mockConsole).toHaveBeenNthCalledWith(3, `${errorMessage} ${sentReason}`);
+    expect(mockConsole).toHaveBeenNthCalledWith(3, `${errorMessage} ${sentErrorReason}`);
 
     expect(order['state']).toBe(order.getSent());
   });
@@ -97,7 +97,7 @@ describe('behavioral/state', () => {
   it('should not allow payingSuccess after payingSuccess', () => {
     order.payingSuccess();
     order.payingSuccess();
-    expect(mockConsole).toHaveBeenCalledWith(`${errorMessage} ${paidReason}`);
+    expect(mockConsole).toHaveBeenCalledWith(`${errorMessage} ${paidErrorReason}`);
     expect(order['state']).toBe(order.getPaid());
   });
 });
